@@ -10,7 +10,7 @@ function compareVlues(sum, luckyNumber){
         outputBox.innerText="Your birthday is not lucky";
     }
 }
----
+
 
 function checkLuckyBirthday() {
     const dob = dateOfBirth.value;
