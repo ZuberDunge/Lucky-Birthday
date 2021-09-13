@@ -6,10 +6,15 @@
     --white: white;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--primary-dark);
     color: var(--white);
+    box-sizing: border-box;
 }
 
 .container {
@@ -19,7 +24,7 @@ body {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding: 5rem 3rem;
+   
 }
 
 h1 {
@@ -31,7 +36,7 @@ h1 {
 input,
 label {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     font-size: larger;
     font-weight: bold;
@@ -57,21 +62,27 @@ button {
 
 #output-box {
     background-color: white;
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     font-size: larger;
     font-weight: bold;
     color: #191F42;
+    box-sizing: border-box;
 }
 
 /**Footer**/
 .footer {
+    margin-top: 5rem;
     background-color: #191F42;
     color: white;
     padding: 0.75rem 1rem;
     text-align: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
 
-    padding-bottom: 250px;
+    
 }
 
 .footer .link {
@@ -110,4 +121,25 @@ button {
 .link {
     text-decoration: none;
     padding: 0.5rem 1rem;
+}
+
+.loading-img img{
+    max-width: 500px;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    body{
+        margin: 1rem;
+    }
+    .footer { 
+   position:static;
+   border-radius: 1rem; 
+    }
+
+    .loading-img img{
+        width: 100%;
+    
+    }
 }

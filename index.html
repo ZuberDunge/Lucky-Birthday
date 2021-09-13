@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>is your birthday lucky?</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="./images/main.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
 <body>
     <h1>is your birthday lucky?</h1>
@@ -15,7 +18,14 @@
         <label for="lucky-number">Lucky Number:</label>
         <input type="number" id="lucky-number">
         <button id="check-number">Check Number</button>
-        <div id="output-box"></div>
+
+
+        
+        <div class="loading-img" style="display: none;" >
+            <img src="./loading.gif" alt="" srcset="">
+          </div>
+                <div id="output-box" style="display: none;"></div>
+        
     </div>
 
 

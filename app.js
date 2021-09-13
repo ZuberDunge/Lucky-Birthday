@@ -2,12 +2,46 @@ const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const checkNumber = document.querySelector("#check-number");
 const outputBox = document.querySelector("#output-box");
+var loadingImg  = document.querySelector('.loading-img');
 
 function compareVlues(sum, luckyNumber){
     if(sum%luckyNumber===0){
-        outputBox.innerText="Your birthday is lucky";
+
+        setTimeout(function(){  
+            loadingImg.style.display = `none`;       
+            outputBox.style.display = `block`;    
+            outputBox.innerText="Yayyyy!! Your birthday is lucky";
+            }, 3000);
+    
+            loadingImg.style.display = `block`;      
+            outputBox.innerText = 'Hang on our robot is working on it!';
+            outputBox.style.display = `block`;
+
+
+        
+
+
+
     }else{
-        outputBox.innerText="Your birthday is not lucky";
+
+        setTimeout(function(){  
+            loadingImg.style.display = `none`;       
+            outputBox.style.display = `block`;    
+            
+        outputBox.innerText="Aww Your birthday is not lucky ( but You're <3)";
+            }, 3000);
+    
+            loadingImg.style.display = `block`;      
+            outputBox.innerText = 'Hang on our robot is working on it!';
+            outputBox.style.display = `block`;
+
+
+        
+
+
+
+
+
     }
 }
 
