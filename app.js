@@ -54,7 +54,7 @@ function checkLuckyBirthday() {
     const sum = calculateSum(dob);
     const luckNumber = Number(luckyNumber.value);
     if(sum&&dob&&luckNumber)
-    compareVlues(sum, dob, luckNumber);
+    compareVlues(sum, luckNumber);
     
     else
     errorBox.style.display = `block`;
