@@ -79,6 +79,6 @@ closeButton.forEach(item => {
         Blur.style.filter = "none";
         outputBox.style.display = "none";
         console.log("clicked");
-
+        errorBox.innerText = ""
     })
 })
