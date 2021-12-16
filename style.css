@@ -1,43 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
 
 :root {
-    --primary-dark: #4338CA;
-    --white: white;
+    --primary-color: #E63946;
+    --secondary-color: #EDF2F4;
+    --rich-black: #042A2B;
 }
 
-*{
+* {
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--primary-dark);
-    color: var(--white);
-    box-sizing: border-box;
+    color: var(--rich-black);
+    background-color: var(--primary-color);
+}
+
+
+
+.btn-flex {
+    display: flex;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+button {
+    margin: 1rem;
+    display: block;
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    width: 90%;
+    font-size: large;
+    font-weight: 500;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: var(--secondary-color) !important;
+}
+
+
+#reset-button {
+    margin-right: 0.5rem;
+    color: var(--rich-black) !important;
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+#goback-button {
+    margin-right: 0.5rem;
+    color: var(--primary-color) !important;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--rich-black);
+    margin: auto;
+}
+
+.margauto {
+    margin: auto !important;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    background-color: var(--primary-color);
+    align-items: center;
+    color: var(--secondary-color);
+    border-bottom: 2px solid;
+}
+
+.bg-nav {
+    background-color: var(--primary-color);
+    padding: 0 1.25rem
+}
+
+.nav .fa-github {
+    font-size: 32px;
+
+}
+
+h1 {
+    background-color: var(--primary-color);
+
+    margin: 0;
+    color: var(--secondary-color);
+
+}
+
+.heading span {
+    color: var(--rich-black);
+}
+
+label,
+caption {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--rich-black) !important;
+}
+
+.nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav a span {
+    font-size: 1.25rem;
 }
 
 .container {
-    
     margin: auto;
     width: fit-content;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-   
+
 }
 
-h1 {
-    text-align: center;
-    padding: 1rem;
-    background-color: #191F42;
-}
+
 
 input,
 label {
     display: block;
     width: 100%;
-    padding: 1rem;
+    text-align: left;
     font-size: larger;
     font-weight: bold;
 }
@@ -46,47 +141,62 @@ input {
     margin-bottom: 1rem;
 }
 
+.loading-txt {
+    font-size: 1.25rem;
+}
+
 button {
     margin: auto;
     display: block;
-    background-color: #191F42;
+    background-color: var(--rich-black);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     font-size: large;
     font-weight: bold;
-    border: 2px solid white;
+    border: 2px solid var(--rich-black);
     cursor: pointer;
     margin-bottom: 1rem;
-    color:  var(--white);
+    color: var(--white);
 }
 
 #output-box {
-    background-color: white;
+
     width: 100%;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
     padding: 1rem;
     font-size: larger;
     font-weight: bold;
-    color: #191F42;
+    color: var(--secondary-color);
     box-sizing: border-box;
 }
 
-/**Footer**/
 .footer {
-    margin-top: 5rem;
-    background-color: #191F42;
-    color: white;
-    padding: 0.75rem 1rem;
-    text-align: center;
+
     position: fixed;
     right: 0;
     left: 0;
     bottom: 0;
+    background-color: var(--primary-color);
+}
 
-    
+footer {
+
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
 }
 
 .footer .link {
-    color: white;
+    color: var(--secondary-color);
 }
 
 .footer ul {
@@ -98,48 +208,247 @@ button {
     font-size: large;
 }
 
-.icon-social {
-    font-size: 24px;
-
+/**spcae**/
+.link {
+    text-decoration: none;
+    padding: 0.5rem;
 }
 
-.footer-list li {
-    display: inline;
-    margin: 0 0.5rem;
+.list-space {
+    padding-bottom: 1rem;
 }
 
-/**lists**/
 .list-non-bullets {
     list-style: none;
 }
 
+
 .list-item-inline {
     display: inline;
-    padding-right: 0rem 0.5rem;
 }
 
-.link {
+a {
     text-decoration: none;
-    padding: 0.5rem 1rem;
 }
 
-.loading-img img{
-    max-width: 500px;
+.icon-social {
 
+    font-size: 24px;
+
+}
+
+.social {
+    transition: all 0.3s;
+}
+
+#close-btn {
+    cursor: pointer !important;
+    /* position: absolute;
+    top: 5%;
+    right: 0;
+    left: 0; */
+    /* display: none; */
+}
+
+.footer-list li {
+
+    display: inline;
+    margin: 0 0.25rem;
+}
+
+.social span,
+.social i {
+    color: var(--rich-black);
+    text-decoration: var(--rich-black);
+}
+
+.bottom {
+    color: var(--secondary-color);
+    padding-bottom: 0px;
+}
+
+.loading-img img {
+    max-width: 500px;
+    width: 100%;
+
+}
+
+.loading-img {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+input {
+    width: 100%;
+    max-width: 450px !important;
+    padding: 1rem;
+    height: 50px;
+    display: block;
+    border-radius: 0.35rem;
+    border: 0;
+    margin: 10px 0;
+    border: 2px solid var(--primary-color);
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.flex img {
+    max-width: 500px;
+    width: 100%;
 }
 
 @media screen and (min-width: 320px) and (max-width: 600px) {
 
-    body{
-        margin: 1rem;
-    }
-    .footer { 
-   position:static;
-   border-radius: 1rem; 
+
+    .bottom {
+
+        margin-top: 0.5rem;
     }
 
-    .loading-img img{
-        width: 100%;
-    
+    .footer {
+        position: static;
+        border-radius: 1rem;
     }
+
+    .loading-img img {
+        width: 100%;
+
+    }
+}
+
+.hide-phone {
+    font-size: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-phone {
+        display: none;
+    }
+
+    .hide-web {
+        display: block !important;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .flex {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer p {
+        margin-top: 0;
+    }
+
+    .main {
+        margin: 0 auto;
+    }
+
+    .nav a span {
+        display: none
+    }
+
+    #color-picker {
+        position: fixed;
+        width: 50px;
+        z-index: 5;
+        border-radius: 0.5rem;
+        bottom: 46px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .footer {
+        position: static;
+    }
+}
+
+.bottom a:hover {
+    color: var(--rich-black);
+    border-bottom: 2px solid var(--rich-black);
+}
+
+.social:hover {
+    color: var(--rich-black);
+}
+
+.bottom a {
+    color: var(--secondary-color);
+    transition: all 0.3s;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.rich-black {
+    color: var(--rich-black) !important;
+}
+
+label {
+    color: var(--primary-color)
+}
+
+.nav a:hover {
+    color: var(--rich-black) !important;
+}
+
+.not-lucky-image {
+    margin-bottom: 5rem;
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+    border: 5px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.not-lucky-image div {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+}
+
+.output img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.you-not-lucky {
+
+    color: var(--rich-black);
+}
+
+.you-not-lucky span {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+}
+
+
+.output {
+    background-color: var(--secondary-color);
+    margin: auto;
+    max-width: 400px;
+    width: 100%;
+    color: var(--primary-color);
+    border-radius: 1rem;
+    padding: 1rem;
 }

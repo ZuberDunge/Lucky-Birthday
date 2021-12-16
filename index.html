@@ -1,31 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>is your birthday lucky?</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
     <link rel="shortcut icon" type="image/png" href="./images/main.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-    <h1>is your birthday lucky?</h1>
+    <div class="blur">
+        <div class="bg-nav">
+            <div class="nav">
+                <h1 class="heading">Luck<span>XD</span></h1>
+                <!-- <input type="color" value="#2e4eef" id="color-picker"> -->
+                <a href="https://github.com/ZuberDunge/Lucky-Birthday">
+                    <i class="fab fa-github"></i>
+                    <span>
+                        View on GitHub <i class="fas fa-external-link-alt"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="flex">
+            <div class="flexbox-1">
+                <div class="container">
+                    <label for="name">Name :
+                        <input autocomplete="off" placeholder="Your Name" type="text" id="name"></label>
+                    <label for="date-of-birth">Date of Birth:
+                        <input autocomplete="off" placeholder="Your DOB" type="date" id="date-of-birth"></label>
+                    <label for="lucky-number">Lucky Number:
+                        <input autocomplete="off" placeholder="Lucky Number" type="number" id="lucky-number"></label>
+
+                    <div class="btn-flex">
+                        <button class="reset-button" id="reset-button">Reset</button>
+                        <button id="check-number">Tell Me!!</button>
+                    </div>
+                    <div id="error-box" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="flexbox-2">
+                <img src="./logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="footer">
+            <footer>
+                <ul class="links social-links list-non-bullets">
+                    <li class="list-item-inline icon-social"><a class="link" href="https://github.com/ZuberDunge"><i
+                                class="fab fa-github social"></i></a></li>
+                    <li class="list-item-inline icon-social"><a class="link"
+                            href="https://www.instagram.com/zuberdunge/"><i class="fab fa-instagram social"></i></a>
+                    </li>
+                    <li class="list-item-inline icon-social"><a class="link"
+                            href="https://www.linkedin.com/in/zuberdunge/"><i class="fab fa-linkedin-in social"></i></a>
+                    </li>
+                    <li class="list-item-inline icon-social"><a class="link"
+                            href="https://www.twitter.com/zuberdunge/"><i class="fab fa-twitter social"></i></a></li>
+                    <li class="list-item-inline icon-social"><a class="link" href="mailto:iamZuberDunge@gmail.com"><i
+                                class="fas fa-envelope social"></i></a></li>
+                    <!-- <li class="list-item-inline icon-social"><a class="link" href="zuberdunge.hashnode.dev"><img class="social custom-icon" src="icons/hashnode.svg"></a></li> -->
+                </ul>
+                <a class="hide-phone" href="https://storyset.com/">Illustrations by Storyset</a>
+                <p class="bottom">© Made with Love 💕 by <span class="social"><a href="https://zuberdunge.tech"><strong>
+                                <span> Zuber Dunge </strong> <i class="fas fa-external-link-alt"></i></span> </a></span>
+                </p>
+                <a class="hide-web" href="https://storyset.com/" style="display: none;">Illustrations by
+                    Storyset</a>
+            </footer>
+        </div>
+    </div>
+
+
     <div class="container">
-        <label for="date-of-birth">Date of Birth:</label>
-        <input type="date" id="date-of-birth">
-        <label for="lucky-number">Lucky Number:</label>
-        <input type="number" id="lucky-number">
-        <button id="check-number">Check Number</button>
-
-
-        
-        <div class="loading-img" style="display: none;" >
+        <div class="loading-img" style="display: none;">
             <img src="./loading.gif" alt="" srcset="">
-          </div>
-                <div id="output-box" style="display: none;"></div>
-                <div id="error-box" style="display: none;"></div>
+            <div class="loading-txt"></div>
+        </div>
+        <div id="output-box" style="display: none;">
+            <div class="output">
+
+                <div class="you-not-lucky">
+
+                </div>
+                <div class="imgDiv"></div>
+
+                <button id="goback-button" class="reset-button">Go Back</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
     </div>
 
 
@@ -34,27 +109,10 @@
 
 
 
-    <footer class="footer">
-        <div class="footer-header">Connect with me on</div>
-    
-        <ul class="links social-links list-non-bullets">
-            <li class="list-item-inline icon-social"><a class="link" href="https://github.com/ZuberDunge"><i
-                        class="fab fa-github social"></i></a></li>
-            <li class="list-item-inline icon-social"><a class="link" href="https://www.instagram.com/zuberdunge/"><i
-                        class="fab fa-instagram social"></i></a></li>
-            <li class="list-item-inline icon-social"><a class="link" href="https://www.linkedin.com/in/zuberdunge/"><i
-                        class="fab fa-linkedin-in social"></i></a></li>
-            <li class="list-item-inline icon-social"><a class="link" href="https://www.twitter.com/zuberdunge/"><i
-                        class="fab fa-twitter social"></i></a></li>
-            <li class="list-item-inline icon-social"><a class="link" href="mailto:iamZuberDunge@gmail.com"><i
-                        class="fas fa-envelope social"></i></a></li>
-            <!-- <li class="list-item-inline icon-social"><a class="link" href="zuberdunge.hashnode.dev"><img class="social custom-icon" src="icons/hashnode.svg"></a></li> -->
-        </ul>
-        <p>© Made with Love 💕 by <span class="social"><strong> Zuber Dunge </strong></span></p>
-    </footer>
 
 
-    
+
     <script src="./app.js"></script>
 </body>
+
 </html>
