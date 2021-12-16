@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <meta property="og:image" content="https://pbs.twimg.com/media/FGtqlM7VQAECCdp?format=jpg&name=large" />
 </head>
 
 <body>
@@ -37,10 +37,10 @@
                     <label for="name">Name :
                         <input autocomplete="off" placeholder="Your Name" type="text" id="name"></label>
                     <label for="date-of-birth">Date of Birth:
-                        <input autocomplete="off" placeholder="Your DOB" type="date" id="date-of-birth"></label>
+                        <input autocomplete="off" placeholder="Your DOB" onfocus="(this.type='date')" type="date"
+                            id="date-of-birth"></label>
                     <label for="lucky-number">Lucky Number:
                         <input autocomplete="off" placeholder="Lucky Number" type="number" id="lucky-number"></label>
-
                     <div class="btn-flex">
                         <button class="reset-button" id="reset-button">Reset</button>
                         <button id="check-number">Tell Me!!</button>
