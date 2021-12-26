@@ -75,6 +75,7 @@ closeButton.forEach(item => {
     item.addEventListener("click", () => {
         username.value = "";
         luckyNumber.value = "";
+        dateOfBirth.type = "type";
         dateOfBirth.value = "";
         Blur.style.filter = "none";
         outputBox.style.display = "none";
